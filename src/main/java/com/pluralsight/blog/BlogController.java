@@ -11,6 +11,7 @@ public class BlogController {
     @RequestMapping("/")
     public String listPosts(ModelMap modelMap) {
         // Similar to map, but used for UI purposes
+        // We use the key  in the html and the value is displayed
         modelMap.put("title", "Blog Post 1");
         return "home";
     }
