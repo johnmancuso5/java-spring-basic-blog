@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-sm-4 py-2 box-shadow" th:each="entry : ${posts}">
                     <!-- Redirect page for when you click the image-->
-                    <a th:href="@{'/post/' +${entry.getId()}}">
+                    <a class="post-url" th:href="@{'/post/' +${entry.getId()}}">
                         <img class="card-img-top" th:src="'https://picsum.photos/id/'+${entry.getId()}+'/500/350'" alt="Post Title Image">
                     </a>
                     <div class="card-body">
