@@ -5,6 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-    <h2 th:text="${title}"></h2>
+    <!--
+        This is a forEach loop for each Post object
+        th:each iterates through each object which is called entry
+        th = table header
+    -->
+    <div th:each="entry : ${posts}">
+        <h2 th:text="${entry.getTitle()}"></h2>
+    </div>
 </body>
 </html>
