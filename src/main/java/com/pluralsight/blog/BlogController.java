@@ -12,8 +12,12 @@ import java.util.List;
 @Controller
 public class BlogController {
 
-    @Autowired
+    // Can autowire this as well but not part of project
     private PostRepository postRepository;
+
+    public BlogController(PostRepository postRepository) {
+        this.postRepository = postRepository;
+    }
 
     // Loads the home.html page
     @RequestMapping("/")
